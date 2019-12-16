@@ -9,14 +9,13 @@ import javax.persistence.Id;
 public class Address {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
 	int address_id;
 	int ploat_no;
 	String area;
 	String street;
 	String city;
 	
-
 	
 	public Address() {
 		super();

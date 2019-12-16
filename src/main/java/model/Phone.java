@@ -1,5 +1,6 @@
 package model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,16 +10,16 @@ import javax.persistence.OneToOne;
 public class Phone {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue
+	//(strategy = GenerationType.AUTO)
 	int phone_id;
 	String phone_type;
 	String service_provider;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.REMOVE)
 	Contact contact;
 	
-	
-	
+
 	@Override
 	public String toString() {
 		return "Phone [phone_id=" + phone_id + ", phone_type=" + phone_type + ", service_provider=" + service_provider
@@ -58,9 +59,5 @@ public class Phone {
 	public void setService_provider(String service_provider) {
 		this.service_provider = service_provider;
 	}
-	
-	
-	
-	
 
 }

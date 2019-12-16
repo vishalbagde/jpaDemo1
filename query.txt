@@ -1,0 +1,6 @@
+select * from person;
+select * from address;
+select * from phone;
+select * from contact;
+select * from person_phone;
+

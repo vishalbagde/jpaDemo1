@@ -18,7 +18,7 @@ public class PersonName {
 	
 	public PersonName() {
 		super();
-	}
+	}	
 
 	public String getFname() {
 		return fname;
